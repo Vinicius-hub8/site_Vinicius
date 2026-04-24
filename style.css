@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap');
+
+/* ── Variáveis ── */
+:root {
+  --navy: #0a1f44;
+  --navy-mid: #1a3a6b;
+  --navy-light: #e8edf5;
+  --branco: #ffffff;
+  --cinza-texto: #4a5568;
+  --cinza-suave: #f4f6fb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--branco);
+  color: var(--navy);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Header ── */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  color: var(--branco);
+  font-size: 22px;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: var(--navy-light);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* ── Sobre ── */
+.sobre-section {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 60px;
+  min-height: 500px;
+  background: var(--branco);
+}
+
+.sobre-texto {
+  flex: 1;
+}
+
+.sobre-tag {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--navy-mid);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.sobre-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  line-height: 1.15;
+  color: var(--navy);
+  margin: 0 0 20px;
+}
+
+.sobre-titulo span {
+  color: var(--navy-mid);
+}
+
+.sobre-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--cinza-texto);
+  max-width: 420px;
+  margin-bottom: 20px;
+}
+
+.contatos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.contatos span {
+  font-size: 13px;
+  color: var(--navy-mid);
+  background: var(--navy-light);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.sobre-linha {
+  display: flex;
+  gap: 40px;
+}
+
+.sobre-stat strong {
+  display: block;
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+  color: var(--navy-mid);
+}
+
+.sobre-stat span {
+  font-size: 12px;
+  color: var(--cinza-texto);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.sobre-foto-wrap {
+  flex: 0 0 300px;
+  position: relative;
+}
+
+.sobre-foto-frame {
+  width: 300px;
+  height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--navy-light);
+}
+
+.sobre-foto-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sobre-detalhe {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--navy-mid);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+/* ── Seções ── */
+.container {
+  padding: 60px;
+  background: var(--cinza-suave);
+}
+
+.secao {
+  margin-bottom: 60px;
+}
+
+.secao-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: var(--navy);
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--navy-light);
+}
+
+/* ── Cards ── */
+.card {
+  background: var(--branco);
+  border: 1px solid var(--navy-light);
+  border-left: 4px solid var(--navy-mid);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  color: var(--navy);
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  color: var(--cinza-texto);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 6px;
+}
+
+.empresa {
+  color: var(--navy-mid) !important;
+  font-weight: 500;
+}
+
+/* Timeline */
+.card-timeline {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  border-radius: 50%;
+  background: var(--navy-mid);
+  margin-top: 4px;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--navy-mid);
+  background: var(--navy-light);
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+}
+
+/* Grid de cards */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.grid-cards .card {
+  margin-bottom: 0;
+}
+
+/* ── Projetos ── */
+.card-projeto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.btn-git {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding: 8px 16px;
+  background: var(--navy);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  width: fit-content;
+  transition: background 0.2s;
+}
+
+.btn-git:hover {
+  background: var(--navy-mid);
+}
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 28px;
+  background: var(--navy);
+  color: var(--navy-light);
+  font-size: 13px;
+}
+
+/* ── Responsivo ── */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 24px;
+  }
+
+  nav {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sobre-section {
+    flex-direction: column;
+    padding: 50px 24px;
+  }
+
+  .sobre-foto-wrap { flex: unset; width: 100%; }
+  .sobre-foto-frame { width: 100%; height: 300px; }
+
+  .container { padding: 40px 24px; }
+
+  .sobre-titulo { font-size: 30px; }
+}
